@@ -95,6 +95,7 @@ public class Picture extends SimplePicture
       for (Pixel pixelObj : rowArray)
       {
         pixelObj.setBlue(0);
+        
       }
     }
   }
@@ -107,6 +108,19 @@ public class Picture extends SimplePicture
 		  for (Pixel pixelObj : rowArray)
 		  {
 			  pixelObj.setRed(0);
+		  }
+	  }
+  }
+  
+  public void zeroGreen()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  
+	  for (Pixel[] row : pixels)
+	  {
+		  for(Pixel current : row)
+		  {
+			  current.setGreen(0);
 		  }
 	  }
   }
