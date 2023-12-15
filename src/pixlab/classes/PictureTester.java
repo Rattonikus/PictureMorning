@@ -89,15 +89,25 @@ public class PictureTester
   {
     Picture canvas = new Picture("640x480.jpg");
     canvas.createCollage();
-    canvas.explore();
+   // canvas.explore();
+	canvas.write("swaaaaaaaaan.jpg");
+
   }
   
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
     Picture swan = new Picture("swan.jpg");
+    swan.explore();
     swan.edgeDetection(10);
     swan.explore();
+  }
+  
+  public static void testBetterEdgeDetection()
+  {
+	  Picture swan = new Picture("swan.jpg");
+	  swan.edgeDetectionBetter(10);
+	  swan.explore();
   }
   
   /** Main method for testing.  Every class can have a main
@@ -117,7 +127,7 @@ public class PictureTester
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    testNegate();
+    //testNegate();
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
@@ -125,9 +135,10 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
     //testCopy();
     //testEdgeDetection();
+    //testBetterEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
